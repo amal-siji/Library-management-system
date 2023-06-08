@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}<title>Books</title>{% endblock title %}
+
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="card" style="width: 13rem;">
+            <img src="{% static 'images/sherlock.jpg' %}" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">SHERLOCK HOLEMS</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              
+            </div>
+          </div>
+      </div>
+      <div class="col-sm">
+        <div class="card" style="width: 13rem;">
+            <img src="{% static 'images/alice.jpeg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">ALICE IN WONDERLAND</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              
+            </div>
+          </div>
+      </div>
+      <div class="col-sm">
+        <div class="card" style="width: 13rem;">
+            <img src="{% static 'images/thefar.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">FAR FROM THE MADDING CROUD</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              
+            </div>
+          </div>
+      </div>
+    </div>
+  </div><br><br>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="card" style="width: 13rem;">
+            <img src="{% static 'images/tom sawer.jfif' %}" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">ADVENTURES OF TOM SAWER</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              
+            </div>
+          </div>
+      </div>
+      <div class="col-sm">
+        <div class="card" style="width: 13rem;">
+            <img src="{% static 'images/dangerousplace.jfif' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">TWO DANGEROUS PLACE</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              
+            </div>
+          </div>
+      </div>
+      <div class="col-sm">
+        <div class="card" style="width: 13rem;">
+            <img src="{% static 'images/benhur.jfif' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">BEN-HUR</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,131 @@
+body {
+  background-image: url('../images/Library Frontpage.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar {
+  padding: 20px;
+
+}
+
+#main-para {
+  width: 700px;
+  margin-left: 1100px;
+  font-size: 36px;
+  color: white;
+  margin-top: 240px;
+}
+
+.dropdown-main {
+  margin-left: 700px;
+}
+
+.dropdown-main-login {
+  margin-left: 100px;
+}
+
+.about-para {
+  width: 890px;
+  height: 500px;
+  margin-left: 480px;
+
+  font-size: 29px;
+  color: white;
+  margin-top: 70px;
+  padding: 10px;
+  border-radius: 30px;
+  margin-bottom: 200px;
+}
+
+.about_h {
+  margin-left: 700px;
+  background-repeat: no-repeat;
+  color: white;
+  font-size: 70px;
+
+}
+
+.contact-form-wrapper {
+  padding-left: 360px;
+  padding-top: 100px;
+}
+
+.contact-form {
+  padding: 30px 40px;
+  background-color: rgb(205, 231, 233);
+  border-radius: 12px;
+  max-width: 500px;
+  margin-left: 300px;
+  margin-top: 100px;
+  box-shadow: 15px 40px 30px black;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form .form-input,
+.form-text-area {
+  background-color: #f0f4f5;
+  height: 50px;
+  padding-left: 16px;
+}
+
+.contact-form .form-text-area {
+  background-color: #f0f4f5;
+  height: auto;
+  padding-left: 16px;
+}
+
+.contact-form .form-control::placeholder {
+  color: black;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.contact-form .form-control:-ms-input-placeholder {
+  color: black;
+  font-weight: 500;
+}
+
+.contact-form .form-control::-ms-input-placeholder {
+  color: black;
+  font-weight: 500;
+}
+
+.contact-form .form-control:focus {
+  border-color: #5a3ff3;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 8px #4b26d1;
+}
+
+.contact-form .title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.contact-form .description {
+  color: black;
+  font-size: 14px;
+  text-align: center;
+}
+
+.contact-form .submit-button-wrapper {
+  text-align: center;
+}
+
+.contact-form .submit-button-wrapper input {
+  border: none;
+  border-radius: 4px;
+  background-color: #f23292;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 60px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.contact-form .submit-button-wrapper input:hover {
+  background-color: #480828;
+}

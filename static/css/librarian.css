@@ -1,0 +1,125 @@
+body {
+    background-image: url('../images/librarianindex.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.lr_head {
+    color: rgb(204, 204, 20);
+    font-size: 50px;
+    margin-left: 700px;
+    margin-top: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.lr_para {
+    width: 700px;
+    margin-left: 590px;
+    font-size: 34px;
+    margin-top: 45px;
+    color: whitesmoke;
+}
+
+.li_logout {
+    margin-left: 800px;
+    height: 50px;
+    width: 200px;
+    font-size: x-large;
+}
+
+.lr_reg_btn {
+    margin-left: 500px;
+}
+
+.li_login_btn {
+    width: 500px;
+
+}
+
+.li_login_form {
+    width: 500px;
+    margin-left: 700px;
+    margin-top: 300px;
+    border: 3px solid black;
+    box-shadow: 5px 10px 15px black;
+    padding: 30px;
+    height: 400px;
+
+}
+
+.li_login_btn {
+    background-color: blue;
+    color: white;
+    font-size: 10px white;
+    border-radius: 30px;
+    width: 200px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 110px;
+    font-size: x-large;
+}
+
+.li_reg_form {
+    margin-left: 700px;
+    color: 10px solid white;
+    font-size: 20px;
+    width: 500px;
+    padding: 50px;
+    height: 700px;
+}
+
+.li_reg_formh {
+    color: rgb(174, 160, 51);
+    margin-left: 700px;
+    margin-top: 50px;
+    color: white;
+    font-size: 50px;
+}
+.li_reg_form,input{
+    width: 500px;
+    padding: auto;
+    height: 49px;
+    border-radius: 10px;
+    font-size:large;
+   
+}
+
+.addform{
+    border: 2px solid rgb(185, 198, 154);
+    margin-left: 500px;
+    width: 600px;
+    padding: 30px;
+    box-shadow: 15px 40px 30px black;
+    color: 5px solid white;
+    height: auto;
+    
+}
+.addformsumbit{
+    width: 100px;
+    height: 50px;
+    margin-left: 200px;
+    background-color:rgb(113, 24, 203);
+    color: white;
+    font-size: x-large;
+}
+.addformh{
+    margin-left: 500px;
+    color: 3px rgb(236, 101, 101);
+    font-size:60px;
+    margin-top: 60px;
+}
+.main_addbook{
+    margin-left: 200px;
+}
+
+.lr_passbtn{
+    width: 300px;
+}
+.changepassword{
+    margin-left: 300px;
+    height: 500px;
+}
+.lr_editform{
+    margin-left: 400px;
+}

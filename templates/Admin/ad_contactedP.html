@@ -1,0 +1,28 @@
+{% extends 'admin/ad_mainbase.html' %}
+
+{% load static %}
+
+{% block title %}<title>Contacted peoples</title>{% endblock title %}
+
+{% block content %}
+
+<table  class="table table-primary " style="width:100%  "   style="margin-left: 500px;border: 3px solid black;margin-top: 300px;width: 700px;font-size: 30px;font-style: italic; color: white;background-color: white;">
+    <tr>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>MESSAGE</th>
+        <th>ACTION</th>
+    </tr>
+
+    {% for i in show_peoples %}
+    <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.message}}</td>
+        <td><a href="{% url 'ad_delCon' i.id %}"><button class="button btn-danger" type="submit">DELETE</button></a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+{% endblock content %}

@@ -1,0 +1,104 @@
+body {
+    background-image: url('../images/rederfront.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.cu_login_form {
+    width: 500px;
+    margin-left: 700px;
+    margin-top: 100px;
+    border: 3px solid black;
+    box-shadow: 5px 10px 15px black;
+    padding: 30px;
+    height: 400px;
+}
+
+.cu_login_btn {
+    background-color: blue;
+    color: white;
+    font-size: 10px white;
+    border-radius: 30px;
+    width: 200px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 110px;
+    font-size: x-large;
+}
+
+.cu_reg_form {
+    width: 600px;
+    margin-left: 700px;
+    margin-top: 30px;
+    /* border: 3px solid black; */
+    box-shadow: 5px 10px 15px black;
+    padding: 20px;
+    height: 600px;
+
+}
+.cu_reg_form,input{
+    width: 530px;
+    padding: auto;
+    height: 50px;
+    border-radius: 10px;
+    font-size:large;
+   
+}
+.cu_reg_formh {
+    color: rgb(174, 160, 51);
+    margin-left: 745px;
+    margin-top: 30px;
+    color: white;
+    font-size: 50px;
+}
+
+.cu_login_form {
+    width: 500px;
+    margin-left: 700px;
+    margin-top: 300px;
+    border: 3px solid black;
+    box-shadow: 5px 10px 15px black;
+    padding: 30px;
+    height: 400px;
+
+
+}
+
+
+.cu_login_btn {
+    background-color: blue;
+    color: white;
+    font-size: 10px white;
+    border-radius: 30px;
+    width: 200px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 110px;
+    font-size: x-large;
+}
+
+
+.cu_homeh{
+    font-size:60px;
+    margin-left: 800px;
+    margin-top: 100px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+}
+.cu_home{
+    margin-left: 1100px;
+    margin-top: 300px;
+    color: white;
+    font-size: xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(95, 80, 185);
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 40px;
+    width: 600px;
+    box-shadow: 5px 10px 15px black;
+
+}

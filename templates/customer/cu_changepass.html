@@ -1,0 +1,28 @@
+{% extends 'customer/cu_mainbase.html' %} {% load static %}
+{% block title %}<title>change Password</title>{% endblock title %}
+
+
+{% block content %}
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<div class="changepassword" style="margin-left: 700px; margin-top: 300px;width: fit-content;width: 300px;">
+    <div>
+        <h1 class="lr_passheading">change Your Password Here</h1>
+    </div>
+    <div>
+        <form method="post">
+
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit" class=" button btn-success w-50 btn-lg lr_passbtn">Change Now</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

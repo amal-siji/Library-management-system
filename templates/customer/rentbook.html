@@ -1,0 +1,17 @@
+{% extends 'customer/cu_mainbase.html' %} {% load static %}
+
+
+{% block title %} <title>BOOKS</title>
+{% endblock title %}
+
+{% block content %}
+
+<form method="post" style="margin-left: 500px;margin-top: 200px;border: 3px solid black;width: 600px;padding: 20px;">
+    <h1>TAKE A BOOK</h1>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class="button btn-primary btn-lg">TAKE</button>
+</form>
+
+
+{% endblock content %}

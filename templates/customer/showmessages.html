@@ -1,0 +1,33 @@
+{% extends 'customer/cu_mainbase.html' %}
+{% load static %}
+
+{% block title %}<title>Messages</title>{% endblock title %}
+
+
+{% block content %}
+<h1 style="margin-left: 800px;">MESSAGES</h1>
+<div style="font-size: 30px; background-color: rgb(81, 94, 94);width: 500px;margin-left: 700px;border-radius: 30px;padding: 20px;height: 500px;">
+
+
+<table>
+  <tr>
+      
+      <th>sender</th>
+      <th>message</th>
+  </tr>
+
+  <tr>
+  
+     
+      {% for i in my_msgs %}
+      
+     
+      <td>{{i.sender}} </td>
+      <td>{{i.message_content}}<a href="{% url 'sendmessages' %}"><button class="button btn-primary btn-sm">Replay</button></a> <br>
+      </td>
+      
+  </tr>
+  {% endfor %}
+  </table>
+
+{% endblock content %}

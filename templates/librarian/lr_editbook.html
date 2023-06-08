@@ -1,0 +1,32 @@
+{% extends 'librarian/lr_mainbase.html' %}
+
+{% load static %}
+
+{% block title %}<title>Bookedit</title>{% endblock title %}
+
+
+{% block content %}
+
+
+<div>
+    <div>
+        <h1 style="margin-left: 500px;margin-top: 50px;">EDIT BOOK</h1>
+    </div>
+    <div>
+        <form method="post" class="lr_editform" enctype="multipart/form-data"
+            style="margin-left: 500px;margin-top: 100px;border: 3px solid black;width: 650px;padding: 20px; box-shadow: 15px 40px 30px black;">
+            {% csrf_token %}
+
+            {{form.as_p}}
+
+            <button type="submit" class="button btn-secondary  btn-lg"
+                style="margin-left: 230px; width: 100px;">Edit</button>
+
+        </form>
+    </div>
+</div>
+
+
+
+
+{% endblock content %}

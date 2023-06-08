@@ -1,0 +1,29 @@
+{% extends 'librarian/lr_mainbase.html' %} {% load static %}
+
+
+{% block title %} <title>All books</title>
+{% endblock title %}
+{% block content %}<div>
+    <h2>BOOKS</h2>
+</div><BR>
+<div class="cardsss d-flex  justify-content-center margin-top:100px; ">
+
+    {% for i in show_books %}
+    <div class="cards">
+        <div class="card" style="width: 16rem;background-color:black;padding:20px;" enctype="multipart/form-data">
+            <img src="{{ i.image.url }}"><br>
+            <div class="card-body">
+
+                <h5 class="card-title">{{i.bookname}}</h5>
+                <p class="card-text">{{i.author}}</p>
+                <p class="card-text">{{i.date }}</p>
+                <a href="{% url 'li_bookedit' i.id %}"><button class="button btn-primary">EDIT</button></a>
+                <a href="{% url 'li_bookdelete' i.id %}"><button class="button btn-danger">DELETE</button></a>
+                <br>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}

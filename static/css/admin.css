@@ -1,0 +1,42 @@
+
+
+body {
+    background-image: url('../images/admin_main.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+.ad_login_form {
+    width: 500px;
+    margin-left: 700px;
+    margin-top: 300px;
+    border: 3px solid black;
+    box-shadow: 5px 10px 35px black;
+    padding: 30px;
+    height: 400px;
+
+}
+
+.ad_login_btn {
+    background-color: blue;
+    color: white;
+    font-size: 10px white;
+    border-radius: 30px;
+    width: 200px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 110px;
+    font-size: x-large;
+}
+.ad_homeh{
+    margin-left: 500px;
+}
+.ad_parah{
+    font-size: 30px;
+    width: 900px;
+    margin-left: 400px;
+    margin-top: 200px;
+}
+.main_home{
+    font-size: 40px;
+}

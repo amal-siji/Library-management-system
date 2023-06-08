@@ -1,0 +1,33 @@
+
+
+
+
+{% extends 'librarian/lr_mainbase.html' %} {% load static %}
+
+
+{% block title %} <title>send message</title>
+{% endblock title %}
+{% block content %}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<div>
+  <div>
+      <h2 style="margin-left: 700px;margin-top: 200px;">MESSAGE NOW</h2>
+  </div>
+  <div>
+      <form method="post" style="margin-left: 700px;border: 3px solid black;width: 600px;padding: 20px;">
+          {% csrf_token %}
+          {{form.as_p}}
+          <button class="button btn-primary btn-lg" style="margin-left: 250px;">SEND</button>
+      </form>
+  </div>
+</div>
+
+
+{% endblock content %}

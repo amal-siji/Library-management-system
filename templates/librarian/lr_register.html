@@ -1,0 +1,28 @@
+{% extends 'librarian/lr_base.html' %} 
+
+{% load static %} 
+{% block title %}<title>Register</title>{% endblock title %}
+{% block content %}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+  <div> <h1 class="li_reg_formh">REGISTER AS LIBRARIAN</h1></div>
+<div>
+<form method="post"  class= " li_reg_form" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <div>
+    <a href="{% url 'li_login' %}" style="margin-left: 180px;">Existing User ?</a>
+</div>
+  <input type="submit" value="RegisterNow" style="background-color: rgb(33, 17, 209);border-radius:30px;color:white;width:240px;margin-top:5px;height:50px;margin-left:110px;margin-bottom:50px;"/>
+
+ 
+</form>
+</div>
+{% endblock content %} 
+
+

@@ -1,0 +1,24 @@
+{% extends 'librarian/lr_mainbase.html' %} {% load static %} {% block content %}
+{% block title %}<title>Addbook</title>{% endblock title %}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+<div class="main_addbook">
+  <div>
+    <h1 class="addformh">Add A Book</h1>
+  </div>
+  <form method="post" class="addform" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div class="add_form_input">
+
+      {{ form.as_p }}
+
+      <input type="submit" value="Add" class="addformsumbit" />
+  </form>
+</div>
+{% endblock content %}

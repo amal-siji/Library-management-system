@@ -1,0 +1,33 @@
+{% extends 'customer/cu_base.html' %}
+
+{% load static %}
+
+{% block title %}<title>Register</title>{% endblock title %}
+{% block content %}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+<h1 class= "cu_reg_formh">REGISTER AS READER</h1>
+
+<form method="post" class= "cu_reg_form" enctype="multipart/form-data" >
+   
+{% csrf_token %}
+
+{{ form.as_p}}
+<div>
+    <a href="{% url 'cu_login' %}" style="margin-left: 180px;">Existing User ?</a>
+</div>
+<input type="submit" value="RegisterNow" style="background-color: rgb(33, 17, 209);border-radius:30px;color:white;width:240px;margin-top:5px;height:50px;margin-left:120px;margin-bottom:50px;"/>
+
+
+
+</form>
+
+{% endblock content %}
+
+
+
