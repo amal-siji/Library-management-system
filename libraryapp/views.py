@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, logout
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 # MAIN PAGE
 
@@ -82,11 +83,11 @@ def li_login(request):
     context = {'form': form}
     return render(request, 'librarian/lr_login.html', context)
 
-
+@login_required
 def li_index(request):
     return render(request, "librarian/lr_index.html")
 
-
+@login_required
 def book_add(request):
     form = lr_addbookForm()
     if request.method == 'POST':
@@ -105,7 +106,7 @@ def book_add(request):
         'form': form}
     return render(request, 'librarian/lr_addbook.html', context)
 
-
+@login_required
 def book_view(request):
     show_books = lr_addbook.objects.all()
     print(show_books)
@@ -113,14 +114,14 @@ def book_view(request):
         'show_books': show_books}
     return render(request, "librarian/li_viewbooks.html", context)
 
-
+@login_required
 def booktaken(request):
     takedbooks = book_rent.objects.all()
     context = {
         'takedbooks': takedbooks}
     return render(request, "librarian/cu_booktaken.html", context)
 
-
+@login_required
 def lr_bookedit(request, id):
     bookform = lr_addbook.objects.get(id=id)
     form = lr_addbookForm(instance=bookform)
@@ -134,21 +135,21 @@ def lr_bookedit(request, id):
     context = {'form': form, 'id': id}
     return render(request, 'librarian/lr_editbook.html', context)
 
-
+@login_required
 def lr_bookdelete(request, id):
     book = lr_addbook .objects.get(id=id)
     book.delete()
     messages.success(request, f"deleted suceesfully")
     return redirect('li_bookview')
 
-
+@login_required
 def lr_delete_cu(request, id):
     buyer = book_rent .objects.get(id=id)
     buyer.delete()
     messages.success(request, f"deleted suceesfully")
     return redirect('li_booktaken')
 
-
+@login_required
 def lr_password_change(request):
     form = lr_StPasswordForm(request.user)
     if request.method == 'POST':
@@ -208,11 +209,11 @@ def cu_login(request):
     context = {'form': form}
     return render(request, 'customer/cu_login.html', context)
 
-
+@login_required
 def cu_index(request):
     return render(request, "customer/cu_index.html")
 
-
+@login_required
 def cu_changepass(request):
     form = cu_StPasswordForm(request.user)
     if request.method == 'POST':
@@ -229,7 +230,7 @@ def cu_changepass(request):
     context = {'form': form}
     return render(request, "customer/cu_changepass.html", context)
 
-
+@login_required
 def cubook_view(request):
     show_books = lr_addbook.objects.all()
     print(show_books)
@@ -237,7 +238,7 @@ def cubook_view(request):
         'show_books': show_books}
     return render(request, "customer/cu_viewbook.html", context)
 
-
+@login_required
 def cu_rent_book(request):
     form = Cu_Rentbookform()
     if request.method == 'POST':
@@ -277,11 +278,11 @@ def ad_login(request):
     context = {'form': form}
     return render(request, 'Admin/ad_login.html', context)
 
-
+@login_required
 def ad_index(request):
     return render(request, "Admin/ad_index.html")
 
-
+@login_required
 def ad_changepass(request):
     form = ad_StPasswordForm(request.user)
     if request.method == 'POST':
@@ -297,7 +298,7 @@ def ad_changepass(request):
     context = {'form': form}
     return render(request, "admin/ad_changepass.html", context)
 
-
+@login_required
 def con_peoples(request):
     show_peoples = Contact.objects.all()
     print(show_peoples)
@@ -305,13 +306,13 @@ def con_peoples(request):
         'show_peoples': show_peoples}
     return render(request, "admin/ad_contactedP.html", context)
 
-
+@login_required
 def ad_delCon(request, id):
     contact = Contact.objects.get(id=id)
     contact.delete()
     return redirect('con_peoples')
 
-
+@login_required
 def ad_readers(request):
     reader = cu_profile.objects.all()
     print(reader)
@@ -319,13 +320,13 @@ def ad_readers(request):
         'readers': reader}
     return render(request, "admin/ad_readers.html", context)
 
-
+@login_required
 def ad_delreaders(request, id):
     readers = cu_profile.objects.get(id=id)
     readers.delete()
     return redirect('readers')
 
-
+@login_required
 def ad_bookview(request):
     show_books = lr_addbook.objects.all()
     print(show_books)
@@ -333,7 +334,7 @@ def ad_bookview(request):
         'show_books': show_books}
     return render(request, "admin/ad_bookview.html", context)
 
-
+@login_required
 def ad_bookedit(request, id):
     bookform = lr_addbook.objects.get(id=id)
     form = lr_addbookForm(instance=bookform)
@@ -346,39 +347,39 @@ def ad_bookedit(request, id):
     context = {'form': form, 'id': id}
     return render(request, 'admin/ad_editbook.html', context)
 
-
+@login_required
 def ad_bookdelete(request, id):
     readers = lr_addbook.objects.get(id=id)
     readers.delete()
     return redirect('ad_bookview')
 
-
+@login_required
 def ad_show_li(request):
     adminshow_li = lr_profile.objects.all()
     context = {
         'adminshow_li': adminshow_li}
     return render(request, "admin/adminshow_li.html", context)
 
-
+@login_required
 def ad_del_li(request, id):
     libr = lr_profile.objects.get(id=id)
     libr.delete()
     return redirect('ad_show_li')
 
-
+@login_required
 def ad_booktaken(request):
     takedbooks = book_rent.objects.all()
     context = {
         'takedbooks': takedbooks}
     return render(request, "admin/ad_booktaken.html", context)
 
-
+@login_required
 def ad_booktakendel(request, id):
     booktaken = book_rent .objects.get(id=id)
     booktaken.delete()
     return redirect('ad_booktaken')
 
-
+@login_required
 def lr_send_messages(request):
     form = MessageForm()
     if request.method == 'POST':
@@ -395,25 +396,25 @@ def lr_send_messages(request):
     context = {'form': form}
     return render(request, 'librarian/lr_sendmessage.html', context)
 
-
+@login_required
 def show_messages(request):
     my_msgs = li_message.objects.filter(reciever=request.user.username)
     context = {'my_msgs': my_msgs}
     return render(request, 'customer/showmessages.html', context)
 
-
+@login_required
 def adshow_messages(request):
     my_msgs = li_message.objects.filter(reciever=request.user.username)
     context = {'my_msgs': my_msgs}
     return render(request, 'admin/adshowmessages.html', context)
 
-
+@login_required
 def lrshow_messages(request):
     my_msgs = li_message.objects.filter(reciever=request.user.username)
     context = {'my_msgs': my_msgs}
     return render(request, 'librarian/showmessages.html', context)
 
-
+@login_required
 def sendmessages(request):
     form = MessageForm()
     if request.method == 'POST':
